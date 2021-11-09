@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2021 at 05:37 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.1
+-- Generation Time: Nov 09, 2021 at 07:25 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `quiz_api`
+-- Database: `do`
 --
 
 -- --------------------------------------------------------
@@ -41,11 +41,7 @@ CREATE TABLE `authors` (
 --
 
 INSERT INTO `authors` (`id`, `name`, `age`, `province`, `created_at`, `updated_at`) VALUES
-(2, 'Him', 21, 'Takoe', '2021-11-04 20:42:47', '2021-11-04 20:42:47'),
-(3, 'Sovanda', 35, 'Takoe', '2021-11-04 20:43:03', '2021-11-04 20:43:03'),
-(4, 'Ronan', 40, 'Takoe', '2021-11-04 20:58:22', '2021-11-04 20:58:22'),
-(5, 'Sreypich', 24, 'phnom penh', '2021-11-04 20:58:43', '2021-11-04 20:58:43'),
-(6, 'lavy', 30, 'phnom penh', '2021-11-04 20:58:55', '2021-11-04 20:58:55');
+(2, 'CHANTHEA PHON', 20, 'Prey Veng', '2021-11-08 20:42:47', '2021-11-09 04:42:47');
 
 -- --------------------------------------------------------
 
@@ -67,10 +63,12 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id`, `author_id`, `title`, `body`, `created_at`, `updated_at`) VALUES
-(1, 4, 'Php book', 'Welcom to php book', '2021-11-04 21:13:02', '2021-11-04 21:13:02'),
-(3, 4, 'HTML book', 'Welcom to html book', '2021-11-04 21:13:41', '2021-11-04 21:13:41'),
-(4, 3, 'HTML book', 'Welcom to html book', '2021-11-04 21:13:52', '2021-11-04 21:13:52'),
-(5, 2, 'Css book', 'Welcom to css book', '2021-11-04 21:14:06', '2021-11-04 21:14:06');
+(10, 2, 'OOP', 'Is so good', '2021-11-09 10:51:36', '2021-11-09 11:04:13'),
+(11, 2, 'JAVA', 'Is the best', '2021-11-09 10:58:38', '2021-11-09 10:58:38'),
+(12, 2, 'HTML', 'The best', '2021-11-09 11:01:26', '2021-11-09 11:01:26'),
+(13, 2, 'TYPESCIPT', 'It so important', '2021-11-09 11:11:20', '2021-11-09 11:11:20'),
+(14, 2, 'PYTHON', 'Hard to learn', '2021-11-09 11:12:27', '2021-11-09 11:12:27'),
+(17, 2, 'PYTHON', 'The best', '2021-11-09 11:13:59', '2021-11-09 11:13:59');
 
 -- --------------------------------------------------------
 
@@ -224,7 +222,7 @@ ALTER TABLE `authors`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`

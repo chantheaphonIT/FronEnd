@@ -69,7 +69,7 @@ class AuthorController extends Controller
         $author->province = $request->province;
         $author->save();
 
-        return response()->json(['message' => 'update successfully!'],200);
+        return response()->json(['message' => 'Update successfully!'],200);
     }
 
     /**

@@ -24,11 +24,7 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'min:3|max:10',
-            'body' =>  'min:3|min:50',
-        
-        ]);
+  
         $book = new Book();
         $book->author_id = $request->author_id;
         $book->title = $request->title;
@@ -58,11 +54,7 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $request->validate([
-            'title' => 'min:3|max:10',
-            'body' =>  'min:3|min:50',
-        
-        ]);
+   
         $book =  Book::findOrFail($id);
         $book->author_id = $request->author_id;
         $book->title = $request->title;
